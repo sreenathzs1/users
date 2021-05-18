@@ -5,23 +5,23 @@ pipeline {
 
     stages {
 
-        stage('compile code') {
+        stage('compile code & Package') {
          steps {
              sh '''
-             mvn compile
+             mvn clean package
              '''
             }  
 
         }
 
-        stage('make package') {
-         steps {
-             sh '''
-             mvn package
-             '''
-            }  
+        //stage('make package') {
+         //steps {
+            // sh '''
+            // mvn package
+             //'''
+            //}  
 
-        }
+       // }
 
         stage('preapare Artifact') {
             steps {
