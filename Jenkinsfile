@@ -10,9 +10,7 @@ pipeline {
              mvn clean package
              '''
             }  
-
         }
-
         //stage('make package') {
          //steps {
             // sh '''
