@@ -5,7 +5,7 @@ pipeline {
 
     stages {
         stage('compile code & Package') {
-         steps {
+            steps {
              sh '''
              mvn clean package
              '''
