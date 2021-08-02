@@ -6,5 +6,5 @@ COPY    pom.xml .
 RUN     mvn package
 
 FROM    openjdk:8-jre-slim
-COPY    --from=BUILD /todo/target/users.jar
+COPY    --from=BUILD /todo/target/users.jar  
 CMD     [ "java", "-jar", "users.jar" ]
